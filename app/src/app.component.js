@@ -3,7 +3,7 @@ var angular = require('angular');
 function AppController() {
   var ctrl = this;
   
-  ctrl.title = 'App Title';
+  ctrl.title = 'App Component';
 }
 
 var AppComponent = angular.module('app').component('app', {

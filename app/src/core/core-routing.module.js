@@ -2,14 +2,14 @@ var angular = require('angular');
 
 var CoreRoutingModule = angular.module('app.core').config(function($routeProvider) {
   $routeProvider
-    .when('/red', {
-        template : 'red.htm'
+    .when('/route1', {
+        template : '<div>Core Route 1 template.</div>'
     })
-    .when('/green', {
-        template : 'green.htm'
+    .when('/route2', {
+        template : '<div>Core Route 2 template.</div>'
     })
-    .when('/blue', {
-        template : 'blue.htm'
+    .when('/route3', {
+        template : '<div>Core Route 3 template.</div>'
     });
 });
 

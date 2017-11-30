@@ -56,8 +56,8 @@ module.exports = function(grunt) {
     },    
     watch: {
       scripts: {
-        files: ['dist/app.bundle.js'],
-        tasks: ['uglify']
+        files: ['src/**/*.js', '*.js'],
+        tasks: ['browserify']
       },
       tscripts: {
         files: ['src/**/*.ts'],

@@ -3,7 +3,7 @@ var angular = require('angular');
 function DashboardController() {
   var ctrl = this;
   
-  ctrl.title = 'Dashboard';
+  ctrl.title = 'Dashboard Component';
 }
 
 var DashboardComponent = angular.module('app.core').component('dashboard', {

@@ -3,7 +3,7 @@ var angular = require('angular');
 function NavigationController() {
   var ctrl = this;
   
-  ctrl.title = 'Navigation Title';
+  ctrl.title = 'Navigation Component';
 }
 
 var NavigationComponent = angular.module('app.core').component('navigation', {
