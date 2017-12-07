@@ -1,5 +1,5 @@
-var angular = require('angular');
-  
+/*global angular*/
+
 function DashboardController() {
   var ctrl = this;
   

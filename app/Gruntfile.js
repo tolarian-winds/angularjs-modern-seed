@@ -50,7 +50,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/bundle.min.js': 'dist/bundle.js'
+          'dist/bundle.js': 'dist/bundle.js'
         }
       }
     },    
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/styles.bundle.css': 'src/styles.bundle.scss'
+          'dist/styles.bundle.css': 'src/styles.scss'
         }
       }
     }
@@ -95,7 +95,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
 
   // Default task(s).
-  grunt.registerTask('styles', ['clean:sass', 'concat:sass', 'sass']);
+  grunt.registerTask('styles', ['clean:sass', 'sass']);
   grunt.registerTask('default', ['clean:dist', 'htmlmin', 'styles', 'browserify', 'connect', 'watch']);
+  grunt.registerTask('build', ['clean:dist', 'htmlmin', 'styles', 'browserify', 'uglify']);
 
 };

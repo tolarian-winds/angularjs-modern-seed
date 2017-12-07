@@ -1,4 +1,4 @@
-var angular = require('angular');
+/*global angular*/
 
 var CoreRoutingModule = angular.module('app.core').config(function($routeProvider) {
   $routeProvider

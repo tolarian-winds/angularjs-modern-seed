@@ -1,5 +1,4 @@
-var angular = require('angular');
-  
+/*global angular*/
 function NavigationController() {
   var ctrl = this;
   
