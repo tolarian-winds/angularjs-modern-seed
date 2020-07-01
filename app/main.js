@@ -2,4 +2,4 @@
 require('angular');
 
 /* require app.module as the base module */
-require('./app.module.js');
+require('./src/app.module.js');

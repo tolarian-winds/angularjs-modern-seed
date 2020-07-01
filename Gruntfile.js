@@ -5,18 +5,18 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     'browserify': {
       dist: {
-        src: ['src/main.js'],
+        src: ['app/main.js'],
         dest: 'dist/bundle.js'
       }
     },
     clean: {
       dist: ['dist'],
-      sass: ['src/styles.bundle.scss']
+      sass: ['app/src/styles.bundle.scss']
     },
     concat: {
       sass: {
-        src: ['src/**/*.scss'],
-        dest: 'src/styles.bundle.scss',
+        src: ['app/src/**/*.scss'],
+        dest: 'app/src/styles.bundle.scss',
       },
     },
     connect: {
@@ -37,9 +37,11 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'src',
+          cwd: 'app/src/',
           src: ['**/*.html', '*.html'],
           dest: 'dist'
+        }, {
+          'dist/index.html': 'app/index.html'
         }]
       }
     },
@@ -56,19 +58,19 @@ module.exports = function(grunt) {
     },    
     watch: {
       scripts: {
-        files: ['src/**/*.js', '*.js'],
+        files: ['app/src/**/*.js', '*.js'],
         tasks: ['browserify']
       },
       tscripts: {
-        files: ['src/**/*.ts'],
+        files: ['app/src/**/*.ts'],
         tasks: ['ts']
       },
       markup: {
-        files: ['src/**/*.html', '*.html'],
+        files: ['app/src/**/*.html', 'app/*.html', '*.html'],
         tasks: ['htmlmin']
       },
       styles: {
-        files: ['src/**/*.scss', '*.scss'],
+        files: ['app/src/**/*.scss', '*.scss'],
         tasks: ['styles']
       }
     },
@@ -79,7 +81,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/styles.bundle.css': 'src/styles.scss'
+          'dist/styles.bundle.css': 'app/src/styles.scss'
         }
       }
     }

@@ -1,7 +1,8 @@
 /*global angular*/
 
-var AppRoutingModule = angular.module('app').config(function($routeProvider) {
-    $routeProvider
+var AppRoutingModule = angular.module('app')
+.config(function($routeProvider) {
+  $routeProvider
     .when('/', {
         template : '<dashboard></dashboard>'
     });

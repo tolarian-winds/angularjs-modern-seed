@@ -6,6 +6,8 @@ This project is meant for developers who wish to transition from AngularJS to An
 - still need to develop in AngularJS but enjoy the Angular structure.
 
 ## Run Application
+Requires gruntjs to work, to install, run `npm install -g grunt-cli`.
+
 Run `grunt` in terminal. 
 This should start the application with the default modules and components, as well as routing.
 
@@ -37,7 +39,7 @@ Run `grunt` will create `dist/bundle.js` not minified, this speeds up the watch 
 Running `grunt` it will take care of the compilation of JS/SCSS and setup a server with watch.
 
 ### Build
-Run `grunt` will create `dist/bundle.js` as minified JS, this is smaller for release.
+Run `grunt build` will create `dist/bundle.js` as minified JS, this is smaller for release.
 
 ### Browserify
 Browserify compiles all the JS together: `src/main.js` --> `dist/bundle.js`
